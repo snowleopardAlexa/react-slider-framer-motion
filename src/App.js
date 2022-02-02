@@ -8,14 +8,16 @@ function App() {
 const [width, setWidth] = useState(0);
 const carousel = useRef();
 
-
+useEffect(() => {
+   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+}, []);
 
   return (
     <div className="app">
-      <motion.div ref={carousel} className="carousel">
+      <motion.div ref={carousel} className="carousel" whileTap={{cursor: "grabbing"}}>
         <motion.div 
            drag="x" 
-           dragConstraints={{right: 0}} 
+           dragConstraints={{right: 0, left: -width}} 
            className="inner-carousel"
         >
           {images.map((item) => {
