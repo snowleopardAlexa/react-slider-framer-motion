@@ -4,14 +4,24 @@ import { motion } from 'framer-motion';
 import images from './images';
 
 function App() {
+
+const [width, setWidth] = useState(0);
+const carousel = useRef();
+
+
+
   return (
     <div className="app">
-      <motion.div className="carousel">
-        <motion.div drag="x" className="inner-carousel">
+      <motion.div ref={carousel} className="carousel">
+        <motion.div 
+           drag="x" 
+           dragConstraints={{right: 0}} 
+           className="inner-carousel"
+        >
           {images.map((item) => {
             return (
-            <motion.div className="item">
-              <img src={item.img} alt="" key={item.id} />
+            <motion.div className="item" key={item.id}>
+              <img src={item.img} alt="" />
             </motion.div>  
             );
           })}
