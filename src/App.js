@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import { useRef, useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 function App() {
   return (
-    <div className="App">
-    
+    <div className="app">
+      <motion.div className="carousel">
+        <motion.div className="inner-carousel">
+
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
