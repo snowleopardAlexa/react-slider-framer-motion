@@ -3,19 +3,15 @@ import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import photosSlider from './data';
 
-function App() {
-  console.log(photosSlider);
+function App({ id }) {
   return (
     <div className="app">
       <motion.div className="carousel">
         <motion.div className="inner-carousel">
-          {photosSlider.map(photoSlider => {
+          {photosSlider.map((photoSlider) => {
             return (
-              <motion.div>
-                <img 
-                  src={photoSlider} 
-                  alt="" 
-                  className="item"
+              <motion.div className="item">
+                <img src={photoSlider} key={id} alt=""
                 />
               </motion.div>  
             );

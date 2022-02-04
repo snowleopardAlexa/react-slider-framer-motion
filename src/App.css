@@ -6,7 +6,7 @@
 
 .inner-carousel {
     display: flex;
-    background: coral;
+    background: rgb(145, 224, 255);
 }
 
 .item {
@@ -21,7 +21,3 @@
     border-radius: 2rem;
 }
 
-.inner-carousel {
-    display: flex;
-    background: coral;
-}
