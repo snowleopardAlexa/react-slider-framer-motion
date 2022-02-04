@@ -12,7 +12,11 @@ function App() {
           {photosSlider.map(photoSlider => {
             return (
               <motion.div>
-                <img src={photoSlider} alt="" />
+                <img 
+                  src={photoSlider} 
+                  alt="" 
+                  className="item"
+                />
               </motion.div>  
             );
           })}
