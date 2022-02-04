@@ -1,7 +1,7 @@
-import tiger from '../img/tiger.jpg';
-import lemur from '../img/lemur.jpg';
-import crane from '../img/crane.jpg';
-import macaw from '../img/macaw.jpg';
+import tiger from './img/tiger.jpg';
+import lemur from './img/lemur.jpg';
+import crane from './img/crane.jpg';
+import macaw from './img/macaw.jpg';
 
 const photosSlider = [
     {
